@@ -21,19 +21,30 @@
 /* class */
 class Switch
 {
-    public:
+    private:
         int _iPin;
         int _nButton; //button identifier: 1, 2 ou 3
         int _sButton; //status of the button, 0 means off, 1 means on
 
-    
+    public:
         /* ************************************************** */
-        /* Method name:        Switch constructor                    */
+        /* Method name:        Switch constructor             */
         /* Method description: Initialize the switch device   */
         /* Input params:       iPin, nButton, sButton         */
         /* Output params:      n/a                            */
         /* ************************************************** */
-        Switch(int iPin, int nButton, int sButton);
+        Switch(int iPin, int nButton);
+
+        /* ************************************************ */
+        /* Method name:        switch_init                  */
+        /* Method description: Initialize the switch device */
+        /* Input params:       n/a                          */
+        /* Output params:      n/a                          */
+        /* ************************************************ */
+        void switch_init();
+
+
+        int switch_read();
 
 };
 

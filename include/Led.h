@@ -18,7 +18,11 @@
 /* class */
 class Led
 {
+    private:
+        int _iPin;  
+
     public:
+
         Led(int iPin);
 
         /* ************************************************ */
@@ -32,13 +36,10 @@ class Led
         /* ************************************************ */
         /* Method name:        led_set                      */
         /* Method description: Set status of specified LED  */
-        /* Input params:       bStatus                     */
+        /* Input params:       bStatus                      */
         /* Output params:      n/a                          */
         /* ************************************************ */
-        void led_set(bool bStatus);
-
-    private:
-        int _iPin;        
+        void led_set(bool bStatus);      
 };
 
 #endif //_LED_H

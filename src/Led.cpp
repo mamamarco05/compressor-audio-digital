@@ -15,10 +15,22 @@ Led::Led(int iPin){
     _iPin = iPin;  
 }
 
+/* ************************************************ */
+/* Method name:        led_init                     */
+/* Method description: Initialize the LED device    */
+/* Input params:       n/a                          */
+/* Output params:      n/a                          */
+/* ************************************************ */
 void Led::led_init(){
     pinMode(_iPin, OUTPUT);
 }
 
+/* ************************************************ */
+/* Method name:        led_set                      */
+/* Method description: Set status of specified LED  */
+/* Input params:       bStatus                      */
+/* Output params:      n/a                          */
+/* ************************************************ */
 void Led::led_set(bool bStatus)
 {
     digitalWrite(_iPin, bStatus);
